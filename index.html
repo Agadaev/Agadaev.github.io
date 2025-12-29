@@ -1,521 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pluto's Games - Tri-Merge Cascade</title>
+  <link rel="icon" href="PlutosGamesLogo.jpg">
   <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(ellipse at center, #0a0f1c 0%, #050812 100%);
-      color: #fff;
-      scroll-behavior: smooth;
-    }
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="PlutosGamesLogo.jpg" alt="Pluto's Games Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      background: rgba(10, 15, 28, 0.9);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:1.5rem;">
+            <img src="PlutosGamesLogo.jpg" alt="Logo"
+              style="width:72px; border-radius:10px; box-shadow:0 5px 15px rgba(127,58,252,0.3);">
+            <span
+              style="font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:0.9rem; color:var(--secondary);">Pluto’s
+              Games</span>
+          </div>
 
-    header .logo img { height: 60px; }
+          <h1>Crafting <span class="text-gradient">Immersive</span> Mobile Universes</h1>
+          <p>Pluto's Games builds premium digital experiences. From addictive puzzles to expanding galaxies, we design
+            for fun, polish, and replayability.</p>
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      padding: 0;
-      margin: 0;
-      align-items: center;
-    }
+          <div class="btn-group">
+            <button class="btn btn-primary" onclick="document.querySelector('#games').scrollIntoView()">Our Latest
+              Game</button>
+            <button class="btn btn-outline" onclick="window.scrollTo(0, document.body.scrollHeight)">Download</button>
+          </div>
 
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      opacity: 0.92;
-      transition: 0.2s;
-    }
-    nav a:hover { opacity: 1; }
+          <div class="store-badges">
+            <a href="#"><img src="AppStoreBadge.png" alt="Download on App Store"></a>
+            <a href="#"><img src="GooglePlayBadge.png" alt="Get it on Google Play"></a>
+          </div>
+        </div>
 
-    /* HERO (updated) */
-    .hero {
-      padding: 4rem 2rem 2.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+        <div class="hero-visual">
+          <div class="phone-wrapper">
+            <div class="phone-frame">
+              <img src="images/screens/35.png" alt="Tri-Merge Cascade Gameplay">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2rem;
-      align-items: center;
-    }
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About <span class="text-gradient">Pluto’s Games</span></h2>
+        <p class="muted" style="max-width:600px; margin:0 auto;">We are an indie studio dedicated to creating
+          high-quality mobile games across diverse genres. Whether it's a puzzle or an RPG, every Pluto title features
+          our signature premium feel and cosmic polish.</p>
+      </div>
+    </div>
+  </section>
 
-    .hero .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 1rem;
-    }
-    .hero .brand img {
-      width: 64px;
-      height: 64px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(127, 58, 252, 0.25);
-    }
+  <!-- GAMES SHOWCASE -->
+  <section class="section" id="games">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our <span class="text-gradient">Library</span></h2>
+        <p class="muted">Explore our expanding universe of titles.</p>
+      </div>
 
-    .hero h1 {
-      font-size: 2.6rem;
-      line-height: 1.15;
-      margin: 0 0 0.6rem;
-      letter-spacing: 0.2px;
-    }
+      <div class="games-grid">
+        <!-- Game 1: Tri-Merge Cascade -->
+        <div class="game-card">
+          <div class="game-card-image">
+            <img src="images/screens/tmc-feature.png" alt="Tri-Merge Cascade">
+          </div>
+          <div class="game-card-content">
+            <span class="game-tag">Puzzle Strategy</span>
+            <h3>Tri-Merge Cascade</h3>
+            <p>Dive into an addictive puzzle adventure where you merge tiles and trigger cascading combos across the
+              galaxy.</p>
+            <div class="game-actions">
+              <button class="btn btn-primary btn-sm" onclick="openGallery()">View Screens</button>
+              <button class="btn btn-outline btn-sm">Download</button>
+            </div>
+          </div>
+        </div>
 
-    .hero p {
-      font-size: 1.12rem;
-      margin: 0 0 1.1rem;
-      color: #b0b0ff;
-      max-width: 52ch;
-    }
+        <!-- Game 2: Coming Soon -->
+        <div class="game-card" style="opacity: 0.7;">
+          <div class="game-card-image"
+            style="background: radial-gradient(circle, #2a2a40, #141420); display: flex; align-items:center; justify-content:center;">
+            <span style="font-size:3rem; opacity:0.3;">🚀</span>
+          </div>
+          <div class="game-card-content">
+            <span class="game-tag"
+              style="background:rgba(255,255,255,0.1); color:#aaa; border-color:rgba(255,255,255,0.1)">In
+              Development</span>
+            <h3>Project Nebula</h3>
+            <p>A new genre-bending experience is currently in the works. Stay tuned for updates from deep space.</p>
+            <div class="game-actions">
+              <button class="btn btn-outline btn-sm" disabled style="opacity:0.5; cursor: default;">Coming Soon</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .btn {
-      padding: 0.8rem 1.35rem;
-      margin: 0.25rem 0.35rem 0.25rem 0;
-      font-size: 1rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.25s;
-      font-weight: 700;
-    }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #7f3afc, #29d8ff);
-      color: white;
-      box-shadow: 0 10px 30px rgba(41, 216, 255, 0.15);
-    }
-    .btn-primary:hover { transform: translateY(-1px); }
 
-    .btn-outline {
-      background-color: transparent;
-      border: 2px solid rgba(255,255,255,0.7);
-      color: white;
-    }
-    .btn-outline:hover { border-color: #ffffff; }
+  <!-- CONTACT & FOOTER -->
+  <section class="section" id="contact" style="padding-bottom:0;">
+    <div class="container" style="text-align:center;">
+      <h2>Get in Touch</h2>
+      <p class="muted" style="margin-bottom:2rem;">Have feedback? Found a black hole in the code?</p>
+      <a href="mailto:info@plutosgames.com" class="btn btn-outline">info@plutosgames.com</a>
 
-    .store-badges { margin-top: 1rem; display: flex; gap: 10px; flex-wrap: wrap; }
-    .store-badges img { height: 40px; }
+      <div style="margin-top:3rem;">
+        <span class="muted" style="font-size:0.9rem; cursor:pointer; text-decoration:underline;"
+          onclick="openPrivacy()">Privacy Policy</span>
+      </div>
+    </div>
+  </section>
 
-    /* Phone preview block */
-    .phone-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .phone-shot {
-      width: 260px;
-      max-width: 85vw;
-      border-radius: 22px;
-      box-shadow:
-        0 18px 60px rgba(0,0,0,0.55),
-        0 0 0 1px rgba(255,255,255,0.06) inset;
-      overflow: hidden;
-      transform: translateY(2px);
-    }
-    .phone-shot img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Pluto’s Games. All rights reserved.</p>
+    </div>
+  </footer>
 
-    /* Sections */
-    .section {
-      padding: 3.5rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
+  <!-- PRIVACY MODAL -->
+  <div id="privacyModal" class="modal-overlay" onclick="closePrivacy()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="close-modal" onclick="closePrivacy()">✕</button>
+      <h2>Privacy Policy</h2>
+      <p class="muted">Effective Date: November 8, 2025</p>
+      <div style="margin-top:1.5rem; line-height:1.7; color: rgba(255,255,255,0.85); text-align: left;">
+        <p>At **Pluto’s Games**, we practice Data Minimalism. We only collect what's needed for the game to work.</p>
 
-    .section h2 {
-      margin: 0 0 0.75rem;
-      font-size: 1.85rem;
-    }
+        <h4 style="margin-top:1.5rem; color: #fff;">1. Data Collection</h4>
+        <ul style="padding-left:1.5rem; margin-top:0.5rem; color: var(--text-muted);">
+          <li><strong>Collected:</strong> Anonymous gameplay stats, device info for bugs, and crash logs.</li>
+          <li><strong>NOT Collected:</strong> Names, emails, phone numbers, or credit card info.</li>
+        </ul>
 
-    .muted { color: rgba(224,224,255,0.82); }
+        <h4 style="margin-top:1.5rem; color: #fff;">2. Third Parties & Ads</h4>
+        <p style="color: var(--text-muted);">We use trusted tools (Unity, Firebase) for analytics. Ads (AdMob) may use
+          anonymous identifiers to show relevant content, which you can opt-out of in Settings.</p>
 
-    /* Game showcase updated */
-    .game-showcase {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.6rem;
-      align-items: start;
-    }
+        <h4 style="margin-top:1.5rem; color: #fff;">3. Your Rights</h4>
+        <p style="color: var(--text-muted);">You have the right to request deletion of local data (by uninstalling) and
+          opt-out of tracking. For children under 13, we do not knowingly collect personal data.</p>
 
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 1.25rem;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-      backdrop-filter: blur(10px);
-    }
+        <div style="margin-top: 2rem; border-top: 1px solid var(--glass-border); padding-top: 1rem;">
+          <p style="font-size: 0.9rem;">For the full legal document, please visit our <a href="privacy.html"
+              style="color:var(--secondary);">Full Privacy Policy Page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.85rem;
-      margin-top: 1rem;
-    }
+  <!-- GALLERY MODAL -->
+  <div id="galleryModal" class="modal-overlay" onclick="closeGallery()">
+    <div class="modal-content" onclick="event.stopPropagation()" style="width: 800px; max-width: 95vw;">
+      <button class="close-modal" onclick="closeGallery()">✕</button>
+      <h2>Game Screenshots</h2>
+      <p class="muted" style="margin-bottom: 2rem;">Tri-Merge Cascade</p>
 
-    .stat {
-      border-radius: 14px;
-      padding: 0.9rem;
-      background: linear-gradient(135deg, rgba(127,58,252,0.25), rgba(41,216,255,0.12));
-      border: 1px solid rgba(255,255,255,0.10);
-    }
-    .stat .k { font-size: 0.85rem; opacity: 0.85; }
-    .stat .v { font-size: 1.25rem; font-weight: 800; margin-top: 4px; }
+      <img src="images/screens/tmc-feature.png" alt="Feature Art"
+        style="width:100%; border-radius:12px; margin-bottom:2rem; box-shadow:0 10px 40px rgba(0,0,0,0.5);">
 
-    /* Screenshot Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 0.85rem;
-      margin-top: 1rem;
-    }
+      <div class="gallery-modal-grid">
+        <div class="gallery-item" onclick="openLightbox('images/screens/31.png')">
+          <img src="images/screens/31.png" alt="Splash Screen">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/screens/32.png')">
+          <img src="images/screens/32.png" alt="Select Mode">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/screens/33.png')">
+          <img src="images/screens/33.png" alt="Prize Wheel">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/screens/34.png')">
+          <img src="images/screens/34.png" alt="Board Start">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/screens/35.png')">
+          <img src="images/screens/35.png" alt="Board Combo">
+        </div>
+      </div>
+    </div>
+  </div>
 
-    .shot {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.03);
-      cursor: pointer;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .shot:hover {
-      transform: translateY(-2px);
-      border-color: rgba(41,216,255,0.35);
-    }
-    .shot img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="modal-overlay" onclick="closeLightbox()">
+    <button class="close-modal" style="top:2rem; right:2rem; width:48px; height:48px; font-size:1.5rem;"
+      onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="Preview" onclick="event.stopPropagation()">
+  </div>
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #0a0f1c;
-      color: #aaa;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    /* Privacy popup styles */
-    #privacyPopup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-    }
-
-    #privacyPopup .popup-content {
-      background: #14142a;
-      padding: 2rem;
-      border-radius: 16px;
-      max-width: 720px;
-      width: min(720px, 95vw);
-      text-align: left;
-      position: relative;
-      color: #e0e0ff;
-      overflow-y: auto;
-      max-height: 90vh;
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 18px 60px rgba(0,0,0,0.6);
-    }
-
-    #privacyPopup .close-btn {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #fff;
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-    #privacyPopup .close-btn:hover { background: rgba(255,255,255,0.10); }
-
-    /* Image Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.88);
-      z-index: 9998;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    #lightbox .lb-inner {
-      position: relative;
-      width: min(520px, 92vw);
-    }
-    #lightbox img {
-      width: 100%;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 18px 60px rgba(0,0,0,0.7);
-      display: block;
-    }
-    #lightbox .lb-close {
-      position: absolute;
-      top: -14px;
-      right: -14px;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .game-showcase { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      header { padding: 1rem 1.25rem; }
-    }
-  </style>
-
+  <!-- SCRIPTS -->
   <script>
-    function showPrivacyPopup() {
-      document.getElementById('privacyPopup').style.display = 'flex';
+    // Privacy Modal
+    function openPrivacy() {
+      const el = document.getElementById('privacyModal');
+      el.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
     }
-    function closePrivacyPopup() {
-      document.getElementById('privacyPopup').style.display = 'none';
+    function closePrivacy() {
+      const el = document.getElementById('privacyModal');
+      el.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
+    // Gallery Modal
+    function openGallery() {
+      const el = document.getElementById('galleryModal');
+      el.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeGallery() {
+      const el = document.getElementById('galleryModal');
+      el.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Lightbox
     function openLightbox(src) {
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightboxImg');
       img.src = src;
-      lb.style.display = 'flex';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
     function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-      document.getElementById('lightboxImg').src = '';
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('active');
+      setTimeout(() => { document.getElementById('lightboxImg').src = ''; }, 300);
+      document.body.style.overflow = '';
     }
 
-    // Close lightbox on ESC
+    // Keyboard Close
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
+        closePrivacy();
         closeLightbox();
-        closePrivacyPopup();
       }
     });
   </script>
-</head>
-
-<body>
-  <header>
-    <div class="logo">
-      <img src="PlutosGamesLogo.png" alt="Pluto's Games Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#game">Game</a></li>
-        <li><a href="#screens">Screens</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="privacy.html">Privacy Page</a></li>
-        <li><a href="#" onclick="showPrivacyPopup(); return false;">Privacy Popup</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- HERO (updated with your gameplay image) -->
-  <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <div class="brand">
-          <img src="PlutosGamesLogo.png" alt="Pluto's Games Logo">
-          <div>
-            <div style="font-weight:800; letter-spacing:0.3px;">Pluto’s Games</div>
-            <div style="opacity:0.75; font-size:0.95rem;">Cosmic mobile puzzle experiences</div>
-          </div>
-        </div>
-
-        <h1>Crafting cosmic mobile adventures</h1>
-        <p>Starting with <strong>Tri-Merge Cascade</strong> — merge hex tiles, trigger chain reactions, and climb to the next galaxy of combos.</p>
-
-        <button class="btn btn-primary">Play Trailer</button>
-        <button class="btn btn-outline">Download</button>
-
-        <div class="store-badges">
-          <img src="AppStoreBadge.png" alt="Download on App Store">
-          <img src="GooglePlayBadge.png" alt="Get it on Google Play">
-        </div>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone-shot" title="Tri-Merge Cascade gameplay">
-          <!-- MOST CINEMATIC GAMEPLAY -->
-          <img src="images/screens/tmc-board-combo.png" alt="Tri-Merge Cascade Gameplay Screenshot">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <h2>About Pluto’s Games</h2>
-    <p class="muted">Our mission: to bring fun, merging-puzzle mobile games that sparkle like the stars — premium UI, satisfying cascades, and endless replay value.</p>
-  </section>
-
-  <section class="section" id="game">
-    <div class="game-showcase">
-      <div class="card">
-        <h2>Featured Game: Tri-Merge Cascade</h2>
-        <p class="muted">Dive into an addictive puzzle adventure where you merge tiles and trigger cascading combos across the galaxy.</p>
-
-        <div class="stats">
-          <div class="stat">
-            <div class="k">Fast Sessions</div>
-            <div class="v">1–3 min</div>
-          </div>
-          <div class="stat">
-            <div class="k">Game Modes</div>
-            <div class="v">5+</div>
-          </div>
-          <div class="stat">
-            <div class="k">Combos</div>
-            <div class="v">Cascades</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0;">Launch + Modes Preview</h3>
-        <p class="muted" style="margin-top:0.35rem;">Your newest screens: splash + game mode selection.</p>
-
-        <div class="gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-          <div class="shot" onclick="openLightbox('images/screens/tmc-splash.png')">
-            <img src="images/screens/tmc-splash.png" alt="Splash Screen">
-          </div>
-          <div class="shot" onclick="openLightbox('images/screens/tmc-modes.png')">
-            <img src="images/screens/tmc-modes.png" alt="Select Game Mode Screen">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FULL SCREENSHOT GALLERY -->
-  <section class="section" id="screens">
-    <h2>Screenshots</h2>
-    <p class="muted">Tap any image to enlarge.</p>
-
-    <div class="gallery">
-      <div class="shot" onclick="openLightbox('images/screens/tmc-splash.png')">
-        <img src="images/screens/tmc-splash.png" alt="Tri-Merge Cascade Splash">
-      </div>
-      <div class="shot" onclick="openLightbox('images/screens/tmc-modes.png')">
-        <img src="images/screens/tmc-modes.png" alt="Tri-Merge Cascade Select Mode">
-      </div>
-      <div class="shot" onclick="openLightbox('images/screens/tmc-wheel.png')">
-        <img src="images/screens/tmc-wheel.png" alt="Tri-Merge Cascade Prize Wheel Popup">
-      </div>
-      <div class="shot" onclick="openLightbox('images/screens/tmc-board-start.png')">
-        <img src="images/screens/tmc-board-start.png" alt="Tri-Merge Cascade Board Start">
-      </div>
-      <div class="shot" onclick="openLightbox('images/screens/tmc-board-combo.png')">
-        <img src="images/screens/tmc-board-combo.png" alt="Tri-Merge Cascade Combo Board">
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Get in touch: <a href="mailto:contact@plutosgames.com" style="color: #29d8ff">contact@plutosgames.com</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Pluto’s Games. All rights reserved.</p>
-  </footer>
-
-  <!-- IMAGE LIGHTBOX -->
-  <div id="lightbox" onclick="closeLightbox()">
-    <div class="lb-inner" onclick="event.stopPropagation()">
-      <button class="lb-close" onclick="closeLightbox()">✕</button>
-      <img id="lightboxImg" src="" alt="Preview">
-    </div>
-  </div>
-
-  <!-- Privacy popup (kept + improved) -->
-  <div id="privacyPopup">
-    <div class="popup-content">
-      <button class="close-btn" onclick="closePrivacyPopup()">✕</button>
-
-      <h2>Privacy Policy</h2>
-      <p><strong>Effective Date:</strong> November 8, 2025</p>
-      <p>At Pluto’s Games, your privacy is important to us. This Privacy Policy outlines how we handle data in relation to our mobile game(s), including <em>Tri-Merge Cascade</em>, and any interactions you have on our website.</p>
-
-      <h3>1. What We Collect</h3>
-      <ul>
-        <li>Anonymous gameplay data (e.g. high scores, level progress)</li>
-        <li>Device type and OS version (for performance optimization)</li>
-        <li>Crash reports and bug logs</li>
-      </ul>
-
-      <p><strong>We do not collect or store:</strong></p>
-      <ul>
-        <li>Personal information such as your name, address, phone number, or email</li>
-        <li>Financial or payment information (in-app purchases are handled by app stores)</li>
-      </ul>
-
-      <h3>2. Why We Collect It</h3>
-      <ul>
-        <li>Improve gameplay balance and performance</li>
-        <li>Fix bugs and crashes</li>
-        <li>Understand how players interact with our games to improve experience</li>
-      </ul>
-
-      <h3>3. Third-Party Services</h3>
-      <p>We may use services like Unity Analytics or Firebase to collect data anonymously. Ad providers like AdMob may also gather limited data to serve relevant ads.</p>
-
-      <h3>4. Data Sharing</h3>
-      <p>We do not sell or share your data for marketing. We share data only with the services mentioned above or if legally required.</p>
-
-      <h3>5. Children’s Privacy</h3>
-      <p>Our games are not intended for children under 13. We do not knowingly collect personal data from children.</p>
-
-      <h3>6. Contact</h3>
-      <p>Questions? Contact us at <a style="color:#29d8ff" href="mailto:privacy@plutosgames.com">privacy@plutosgames.com</a></p>
-
-      <hr style="border:0; border-top:1px solid rgba(255,255,255,0.12); margin: 18px 0;">
-      <p class="muted">Prefer a full page? Open <a style="color:#29d8ff" href="privacy.html">Privacy Policy page</a>.</p>
-    </div>
-  </div>
 </body>
+
 </html>
